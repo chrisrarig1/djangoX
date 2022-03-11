@@ -13,14 +13,19 @@ html {
 
 body {
   margin-bottom: 60px; /* Margin bottom by footer height */
+  background-image: url("/static/images/Fishing.png");
+  background-size: cover;
+
 }
 
 .container {
   max-width: 960px;
+  background: rgba(238, 235, 235, 0.85);
 }
 
 .pricing-header {
   max-width: 700px;
+  
 }
 
 .footer {

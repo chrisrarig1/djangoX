@@ -1,0 +1,15 @@
+{% extends '_base.html' %} 
+
+{% block content %}
+<h1 style="text-align: center;">Fishing Record</h1>
+<a href="{% url 'fish_create' %}">+ New Fish</a>
+
+<ul style="padding-left: 75px;padding-top: 20px;font-size:larger;">
+    {% for fish in object_list %}
+    <li>
+        <a href="{% url 'fish_detail' fish.pk %}" style="font-size: larger; color: black;">{{fish.species}}</a>
+    </li>
+    {% endfor %} 
+</ul> 
+
+{% endblock content %}
