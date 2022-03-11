@@ -1,0 +1,16 @@
+
+{% extends '_base.html' %} 
+
+{% block content %}
+<div class="card" style="width:auto;">
+    <div class="card-header">
+        <h2 style="text-align: center;">{{fish.species}}</h2>
+    </div>
+    <div class="container">
+        <p style="font-size: large;font-style: italic ;">Angler: {{fish.angler}}</p>
+        <p>Description: {{fish.description}}</p>
+        <button type="button" style="padding: 5px;"><a href="{% url 'fish_update' fish.pk %}">Update fish</a></button>
+        <button type="button" style="padding: 5px;"><a href="{% url 'fish_delete' fish.pk %}">Delete fish</a></button>
+    </div>
+</div>
+{% endblock content %}

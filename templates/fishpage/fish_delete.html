@@ -1,0 +1,11 @@
+{% extends '_base.html' %} 
+
+{% block content %}
+<h2>Update Fish</h2>
+    <form action ="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p>Are you sure you want to delete "{{fish.species}}"?</p>
+        <input type="submit" value="OK">
+    </form>
+{% endblock content %}
